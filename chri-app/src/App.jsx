@@ -1,12 +1,21 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Hero from "./components/home/Hero";
+import AppLayOut from "./ui/AppLayOut";
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayOut />,
+    children: [
+      {
+        path: "/",
+        element: <Hero />,
+      },
+    ],
+  },
+]);
+
 function App() {
-  return (
-    <div>
-      <h1>Home</h1>
-      <h1>About</h1>
-      <h1>Projects</h1>
-      <h1>Contacts</h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
