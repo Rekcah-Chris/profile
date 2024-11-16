@@ -5,7 +5,15 @@ const IntroContainer = styled.div`
   background-color: #1e293b;
   color: white;
   text-align: center;
-  padding: 2.5rem 0;
+  padding: 1rem 0;
+  width: 100%;
+  ///
+  justify-content: center;
+  background-color: #1e293b;
+  position: fixed; /* Keeps it visible */
+  z-index: 100; /* Ensure it's above other elements */
+  position: fixed; /* Keeps it visible */
+  bottom: 3.5rem; /* Distance from the bottom */
 `;
 
 const ProfileImage = styled.img`

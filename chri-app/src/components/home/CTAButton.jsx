@@ -15,15 +15,23 @@ const GradientButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    display: none;
+    display: block;
   }
 `;
 
 const ButtonsContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  background-color: #1e293b;
+  position: fixed; /* Keeps it visible */
+  bottom: 0rem; /* Distance from the bottom */
+  left: 0; /* Align to the left of the viewport */
+  width: 100%; /* Full width of the viewport */
+  transform: none; /* Remove translation since it's no longer centered */
+  z-index: 100; /* Ensure it's above other elements */
+  padding: 1rem 0; /* Optional: Add padding for visual balance */
 `;
 
 function CTAButton() {

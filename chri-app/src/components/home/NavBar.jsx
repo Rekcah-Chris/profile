@@ -4,10 +4,15 @@ import styled from "styled-components";
 const NavBarContainer = styled.div`
   background-color: #1e293b;
   color: white;
-  width: 100%;
-  position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #1e293b;
+  position: fixed; /* Keeps it visible */
+  width: 100%; /* Full width of the viewport */
+  transform: none; /* Remove translation since it's no longer centered */
+  padding: 1rem 0; /* Optional: Add padding for visual balance */
 `;
 
 const NavContent = styled.div`

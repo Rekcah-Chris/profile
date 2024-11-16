@@ -2,12 +2,11 @@ import styled from "styled-components";
 import Hero from "../components/home/Hero";
 
 const HomeContainer = styled.div`
-  position: flex;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
-  background-color: #f8fafc;
+  padding: 1.125rempx;
+  background-color: #1e293b;
 `;
 
 function AppLayOut() {
