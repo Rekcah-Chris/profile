@@ -2,17 +2,16 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavBarContainer = styled.div`
-  background-color: #1e293b;
   color: white;
   top: 0;
-  z-index: 1;
+  z-index: 10px;
   display: flex;
   justify-content: center;
-  background-color: #1e293b;
-  position: fixed; /* Keeps it visible */
-  width: 100%; /* Full width of the viewport */
-  transform: none; /* Remove translation since it's no longer centered */
-  padding: 1rem 0; /* Optional: Add padding for visual balance */
+  position: fixed;
+  width: 100%;
+  padding: 0.78rem;
+  background-color: rgba(30, 41, 59, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const NavContent = styled.div`
@@ -20,8 +19,8 @@ const NavContent = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  margin: 1.2px auto;
+  padding: 1.2px 1.2rem;
 `;
 
 const Logo = styled.div`
@@ -54,7 +53,7 @@ const LinksContainer = styled.div`
     right: 1rem;
     background-color: #1e293b;
     border: 1px solid #374151;
-    display: none; /* Controlled by state if adding a toggle */
+    display: none; /* Add a toggle for mobile menu */
   }
 `;
 
@@ -73,18 +72,20 @@ const ConnectButton = styled.button`
 
 function NavBar() {
   return (
-    <NavBarContainer>
-      <NavContent>
-        <Logo>Cape Code</Logo>
-        <LinksContainer>
-          <Link to="/home">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contacts</Link>
-        </LinksContainer>
-        <ConnectButton>Connect</ConnectButton>
-      </NavContent>
-    </NavBarContainer>
+    <>
+      <NavBarContainer>
+        <NavContent>
+          <Logo>Cape Code</Logo>
+          <LinksContainer>
+            <Link to="/home">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/contact">Contacts</Link>
+          </LinksContainer>
+          <ConnectButton>Connect</ConnectButton>
+        </NavContent>
+      </NavBarContainer>
+    </>
   );
 }
 

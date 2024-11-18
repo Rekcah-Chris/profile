@@ -8,6 +8,7 @@ const GradientButton = styled.button`
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
+  font-size: 1rem;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -15,23 +16,25 @@ const GradientButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    display: block;
+    display: inline-block; /* Ensures visibility on small screens */
+    padding: 0.5rem 1rem;
   }
 `;
 
 const ButtonsContainer = styled.div`
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  background-color: #1e293b;
-  position: fixed; /* Keeps it visible */
-  bottom: 0rem; /* Distance from the bottom */
-  left: 0; /* Align to the left of the viewport */
-  width: 100%; /* Full width of the viewport */
-  transform: none; /* Remove translation since it's no longer centered */
-  z-index: 100; /* Ensure it's above other elements */
-  padding: 1rem 0; /* Optional: Add padding for visual balance */
+  width: 100%;
+  padding: 1rem 0;
+  background-color: rgba(30, 41, 59, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 `;
 
 function CTAButton() {
